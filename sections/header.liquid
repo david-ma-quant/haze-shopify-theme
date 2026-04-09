@@ -307,7 +307,7 @@
 
       this.setHeaderHeight();
 
-      window.matchMedia('(max-width: 990px)').addEventListener('change', this.setHeaderHeight.bind(this));
+      window.matchMedia('(max-width: 750px)').addEventListener('change', this.setHeaderHeight.bind(this));
 
       if (this.headerIsAlwaysSticky) {
         this.header.classList.add('shopify-section-header-sticky');
@@ -445,6 +445,34 @@
     }
   </script>
 {%- endif -%}
+
+{%- stylesheet -%}
+  /* Haze nav overrides — per D-14 */
+  .header__menu-item,
+  .header__menu-item:visited {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .header__menu-item:hover,
+  .header__menu-item:focus-visible {
+    opacity: 0.55;
+    text-decoration: none;
+  }
+
+  /* Show inline nav at 750px instead of Dawn's 990px default — per D-14 */
+  @media screen and (min-width: 750px) {
+    header-drawer {
+      display: none;
+    }
+    .header__inline-menu {
+      display: flex;
+    }
+  }
+{%- endstylesheet -%}
 
 {% schema %}
 {

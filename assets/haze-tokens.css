@@ -1,0 +1,34 @@
+/* Haze Design Tokens
+   Static CSS custom properties — values NOT controlled by Shopify Customize panel.
+   Loaded globally from layout/theme.liquid after base.css.
+   Source: D-07, D-08 from phase 01 CONTEXT.md
+*/
+
+:root {
+  /* Brand color reference aliases
+     These are for use in custom Haze CSS (sections, snippets).
+     Dawn's Customize-panel colors use rgb(var(--color-background)) pattern instead. */
+  --haze-color-terracotta: #C4714A;
+  --haze-color-cream:      #F7F3EE;
+  --haze-color-blush:      #E8D5CE;
+  --haze-color-dark:       #2C2420;
+
+  /* Spacing scale (per D-07) */
+  --haze-space-xs:  0.4rem;   /* 4px  */
+  --haze-space-sm:  0.8rem;   /* 8px  */
+  --haze-space-md:  1.6rem;   /* 16px */
+  --haze-space-lg:  3.2rem;   /* 32px */
+  --haze-space-xl:  6.4rem;   /* 64px */
+
+  /* Border radius (per D-07) */
+  --haze-radius-button: 2px;
+  --haze-radius-card:   4px;
+
+  /* Font family overrides (per D-08)
+     Dawn emits --font-heading-family and --font-body-family from theme settings
+     in an inline <style> tag. We use !important to ensure our Google Fonts win
+     over Dawn's inline emission. If fonts become available in Shopify's Typography
+     picker, remove !important and set via Customize panel instead. */
+  --font-heading-family: 'Cormorant Garamond', Georgia, serif !important;
+  --font-body-family:    'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
