@@ -1,0 +1,59 @@
+{{ 'haze-ritual-description.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'haze-pdp-gallery.js' | asset_url }}" defer="defer"></script>
+
+<section id="haze-ritual-{{ section.id }}" class="haze-ritual-description">
+  <div class="haze-ritual-description__inner page-width">
+    {%- if section.settings.show_overline -%}
+      <span class="haze-ritual-description__overline">{{ section.settings.overline | escape }}</span>
+    {%- endif -%}
+    <h2 class="haze-ritual-description__heading">{{ section.settings.heading | escape }}</h2>
+    {%- if section.settings.quote != blank -%}
+      <p class="haze-ritual-description__quote">{{ section.settings.quote | escape }}</p>
+    {%- endif -%}
+    <div class="haze-ritual-description__body rte">
+      {{ section.settings.body }}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Haze Ritual Description",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_overline",
+      "label": "Show overline label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "overline",
+      "label": "Overline text",
+      "default": "The Ritual"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A morning ritual worth doing."
+    },
+    {
+      "type": "text",
+      "id": "quote",
+      "label": "Pull-quote (italic accent line)",
+      "default": "Your best hair days start before the mirror."
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Description",
+      "default": "<p>The Hair Ritual Kit is built around one idea: the tools you use every day should feel worth using. Silk that glides. Bristle that nourishes. Cotton that doesn\u2019t roughen. A scrunchie that doesn\u2019t leave a dent. Five minutes in the morning, every morning.</p>"
+    }
+  ],
+  "presets": [{ "name": "Haze Ritual Description" }]
+}
+{% endschema %}
