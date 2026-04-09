@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-02-PLAN.md (product grid + video cards)
-last_updated: "2026-04-09T02:17:27.699Z"
+stopped_at: Completed 02-03-PLAN.md (value props, social proof, bottom CTA, homepage wiring)
+last_updated: "2026-04-09T02:20:21Z"
 last_activity: 2026-04-09 -- Phase 2 planning complete
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 6
-  completed_plans: 2
-  percent: 33
+  completed_plans: 3
+  percent: 50
 ---
 
 # Project State
@@ -56,6 +56,7 @@ Progress: [███░░░░░░░] 33%
 *Updated after each plan completion*
 | Phase 02-core-pages P01 | 1 | 1 tasks | 2 files |
 | Phase 02 P02 | 2 | 2 tasks | 4 files |
+| Phase 02 P03 | ~15 min | 3 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -78,6 +79,9 @@ Recent decisions affecting current work:
 - [Phase 02]: video.play().catch() used on all play calls to prevent DOMException on autoplay-blocked browsers
 - [Phase 02]: Touch detection via matchMedia('(hover: none)') instead of UA string sniffing
 - [Phase 02]: Video element omitted from DOM entirely when video_url is blank (Liquid unless guard)
+- [Phase 02-03]: SVG icons use hardcoded stroke="#C4714A" — img tags do not pass CSS context to SVGs
+- [Phase 02-03]: Social proof stylesheet_tag placed inside show_section guard — no CSS loaded when hidden
+- [Phase 02-03]: Bottom CTA uses padding var(--haze-space-lg) not xl — intentionally compact per D-22
 
 ### Pending Todos
 
@@ -91,5 +95,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-09T02:17:27.697Z
-Stopped at: Completed 02-02-PLAN.md (product grid + video cards)
-Resume: Run `/gsd:discuss-phase 2 --auto` → `/gsd:plan-phase 2` → `/gsd:execute-phase 2`
+Stopped at: Completed 02-03-PLAN.md (value props, social proof, bottom CTA, homepage wiring)
+Resume: Run `/gsd:execute-phase 2` to continue with remaining Phase 2 plans
