@@ -7,9 +7,9 @@
   </div>
   <div class="haze-hero__scrim"></div>
   <div class="haze-hero__content">
-    <h1 class="haze-hero__headline">{{ section.settings.headline }}</h1>
-    <p class="haze-hero__subtext">{{ section.settings.subtext }}</p>
-    <a href="{{ section.settings.cta_link }}" class="haze-hero__cta">{{ section.settings.cta_label }}</a>
+    <h1 class="haze-hero__headline">{{ section.settings.headline | escape }}</h1>
+    <p class="haze-hero__subtext">{{ section.settings.subtext | escape }}</p>
+    <a href="{{ section.settings.cta_link }}" class="haze-hero__cta">{{ section.settings.cta_label | escape }}</a>
   </div>
 </section>
 
