@@ -1,0 +1,53 @@
+{{ 'haze-value-props.css' | asset_url | stylesheet_tag }}
+
+<section id="haze-value-props-{{ section.id }}" class="haze-value-props">
+  <div class="haze-value-props__grid">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'prop' -%}
+        <div class="haze-value-props__block" {{ block.shopify_attributes }}>
+          {%- if block.settings.icon != blank -%}
+            <div class="haze-value-props__icon" aria-hidden="true">
+              <img
+                src="{{ block.settings.icon | asset_url }}"
+                alt=""
+                width="40"
+                height="40"
+                loading="lazy"
+              >
+            </div>
+          {%- endif -%}
+          <h3 class="haze-value-props__heading">{{ block.settings.heading | escape }}</h3>
+          <p class="haze-value-props__body">{{ block.settings.body | escape }}</p>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Haze Value Props",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "blocks": [
+    {
+      "type": "prop",
+      "name": "Value Prop",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Icon filename (e.g. haze-icon-ritual.svg)" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "A Complete Ritual" },
+        { "type": "text", "id": "body", "label": "Body text", "default": "Every tool your hair needs, curated in one luxurious kit." }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Haze Value Props",
+    "blocks": [
+      { "type": "prop", "settings": { "icon": "haze-icon-ritual.svg", "heading": "A Complete Ritual", "body": "Every tool your hair needs, curated in one luxurious kit." }},
+      { "type": "prop", "settings": { "icon": "haze-icon-leaf.svg", "heading": "Thoughtfully Sourced", "body": "OEKO-TEX certified towel. Silk-grade comb. Materials that care." }},
+      { "type": "prop", "settings": { "icon": "haze-icon-gift.svg", "heading": "Gift-Ready Always", "body": "Arrives in a keepsake gift box — no wrapping required." }}
+    ]
+  }]
+}
+{% endschema %}

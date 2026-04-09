@@ -1,0 +1,58 @@
+/* Value props section — 3 columns desktop, stacked mobile (per D-16) */
+.haze-value-props {
+  padding: var(--haze-space-xl) var(--haze-space-lg);
+  background-color: var(--haze-color-cream);
+}
+
+.haze-value-props__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--haze-space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 750px) {
+  .haze-value-props__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--haze-space-lg);
+  }
+}
+
+.haze-value-props__block {
+  text-align: center;
+}
+
+/* Icon: 40x40, terracotta color via currentColor */
+.haze-value-props__icon {
+  margin-bottom: var(--haze-space-sm);
+  color: var(--haze-color-terracotta);
+}
+
+.haze-value-props__icon img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Heading: Heading role — 24px (1.5rem), Cormorant Garamond, weight 400 */
+.haze-value-props__heading {
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--haze-color-dark);
+  margin: 0 0 var(--haze-space-sm) 0;
+}
+
+/* Body: Body role — 16px (1rem), DM Sans, weight 400, opacity 0.8 */
+.haze-value-props__body {
+  font-family: var(--font-body-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--haze-color-dark);
+  opacity: 0.8;
+  margin: 0;
+}
