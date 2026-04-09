@@ -1,0 +1,97 @@
+/* Haze Pages — shared CSS for About + FAQ page brand overrides
+   Loaded conditionally on page.about and page.faq templates via layout/theme.liquid */
+
+/* ========================================
+   ABOUT PAGE — image-banner hero overrides
+   Dawn markup: .banner__heading, .banner__text
+   ======================================== */
+
+/* Hero headline — Display role: Cormorant Garamond italic */
+.banner__heading {
+  font-family: var(--font-heading-family);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.1;
+}
+
+/* Hero subtext — Body role */
+.banner__text {
+  font-family: var(--font-body-family);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ========================================
+   ABOUT PAGE — image-with-text overrides
+   Dawn markup: .image-with-text h2, .image-with-text__text
+   ======================================== */
+
+/* Section headings — Heading role */
+.image-with-text h2,
+.image-with-text .image-with-text__heading {
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--haze-color-dark);
+}
+
+/* Body text — Body role */
+.image-with-text .image-with-text__text p {
+  font-family: var(--font-body-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--haze-color-dark);
+  opacity: 0.85;
+}
+
+/* ========================================
+   FAQ PAGE — collapsible-content overrides
+   Dawn markup: .collapsible-content__heading, .accordion__title, .accordion__content
+   ======================================== */
+
+/* Section heading ("Questions & Answers") — Heading role
+   Dawn emits: h2.collapsible-content__heading.inline-richtext */
+.collapsible-content .collapsible-content__heading {
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--haze-color-dark);
+}
+
+/* Question text (summary accordion title) — Heading role
+   Dawn emits: h3.accordion__title.inline-richtext.h4 inside <summary> */
+.accordion__title {
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--haze-color-dark);
+}
+
+/* Answer text (details body) — Body role
+   Dawn emits: div.accordion__content.rte */
+.accordion__content p,
+.accordion__content .rte p {
+  font-family: var(--font-body-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--haze-color-dark);
+  opacity: 0.85;
+}
+
+/* Accordion item separator — subtle bottom border
+   Dawn emits: div.accordion wrapping each details/summary */
+.accordion {
+  border-color: rgba(44, 36, 32, 0.15);
+}
+
+/* Summary padding */
+.collapsible-content summary {
+  padding-top: var(--haze-space-sm);
+  padding-bottom: var(--haze-space-sm);
+}
