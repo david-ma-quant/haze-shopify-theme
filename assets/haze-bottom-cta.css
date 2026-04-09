@@ -1,0 +1,58 @@
+/* Bottom CTA — compact hero variant, blush background (per D-21/22) */
+.haze-bottom-cta {
+  padding: var(--haze-space-lg) var(--haze-space-md);
+  background-color: var(--haze-color-blush);
+}
+
+.haze-bottom-cta__content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Headline: Heading role — 24px (1.5rem), Cormorant Garamond, weight 400 */
+.haze-bottom-cta__headline {
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--haze-color-dark);
+  margin: 0 0 var(--haze-space-sm) 0;
+}
+
+/* Subtext: Body role — 16px (1rem), DM Sans, weight 400, opacity 0.75 */
+.haze-bottom-cta__subtext {
+  font-family: var(--font-body-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--haze-color-dark);
+  opacity: 0.75;
+  margin: 0 0 var(--haze-space-md) 0;
+}
+
+/* CTA button: same style as hero CTA — terracotta fill, cream text */
+.haze-bottom-cta__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 32px;
+  background-color: var(--haze-color-terracotta);
+  color: var(--haze-color-cream);
+  border-radius: var(--haze-radius-button);
+  font-family: var(--font-body-family);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.haze-bottom-cta__cta:hover,
+.haze-bottom-cta__cta:focus-visible {
+  opacity: 0.85;
+}

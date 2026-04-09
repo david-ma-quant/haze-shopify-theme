@@ -1,0 +1,71 @@
+{%- if section.settings.show_section -%}
+  {{ 'haze-social-proof.css' | asset_url | stylesheet_tag }}
+
+  <section id="haze-social-proof-{{ section.id }}" class="haze-social-proof">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="haze-social-proof__heading">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+    <div class="haze-social-proof__grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'testimonial' -%}
+          <div class="haze-social-proof__card" {{ block.shopify_attributes }}>
+            <span class="haze-social-proof__stars" aria-label="5 out of 5 stars" role="img">
+              {%- for i in (1..5) -%}
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                  <path d="M8 1.2l1.8 3.7 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L2.2 5.5l4-.6L8 1.2z"/>
+                </svg>
+              {%- endfor -%}
+            </span>
+            <blockquote class="haze-social-proof__quote">
+              &ldquo;{{ block.settings.quote | escape }}&rdquo;
+            </blockquote>
+            <cite class="haze-social-proof__name">{{ block.settings.name | escape }}</cite>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Haze Social Proof",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_section",
+      "label": "Show social proof section",
+      "default": false,
+      "info": "Enable when real reviews are available"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section heading",
+      "default": "What they're saying"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        { "type": "text", "id": "quote", "label": "Quote" },
+        { "type": "text", "id": "name", "label": "Reviewer name" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Haze Social Proof",
+    "settings": { "show_section": false },
+    "blocks": [
+      { "type": "testimonial", "settings": { "quote": "Finally a routine I actually do every single morning.", "name": "SARAH K." }},
+      { "type": "testimonial", "settings": { "quote": "The silk comb alone is worth it. My hair is so much smoother.", "name": "MAYA R." }},
+      { "type": "testimonial", "settings": { "quote": "I bought it as a gift and ended up ordering one for myself too.", "name": "JESSICA T." }}
+    ]
+  }]
+}
+{% endschema %}

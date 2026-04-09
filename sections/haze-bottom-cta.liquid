@@ -1,0 +1,29 @@
+{{ 'haze-bottom-cta.css' | asset_url | stylesheet_tag }}
+
+<section id="haze-bottom-cta-{{ section.id }}" class="haze-bottom-cta">
+  <div class="haze-bottom-cta__content">
+    <h2 class="haze-bottom-cta__headline">{{ section.settings.headline | escape }}</h2>
+    {%- if section.settings.subtext != blank -%}
+      <p class="haze-bottom-cta__subtext">{{ section.settings.subtext | escape }}</p>
+    {%- endif -%}
+    <a href="{{ section.settings.cta_link }}" class="haze-bottom-cta__cta">
+      {{- section.settings.cta_label | escape -}}
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Haze Bottom CTA",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    { "type": "text", "id": "headline", "label": "Headline", "default": "Your hair ritual starts here." },
+    { "type": "text", "id": "subtext", "label": "Subtext", "default": "The Hair Ritual Kit — $59, free shipping." },
+    { "type": "text", "id": "cta_label", "label": "CTA button label", "default": "Shop the Kit" },
+    { "type": "url", "id": "cta_link", "label": "CTA button link", "default": "/products/hair-ritual-kit" }
+  ],
+  "presets": [{ "name": "Haze Bottom CTA" }]
+}
+{% endschema %}

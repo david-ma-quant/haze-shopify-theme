@@ -1,0 +1,74 @@
+/* Social proof section — 3-column testimonial cards (per D-18/19/20) */
+.haze-social-proof {
+  padding: var(--haze-space-xl) var(--haze-space-lg);
+  background-color: var(--haze-color-cream);
+}
+
+.haze-social-proof__heading {
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--haze-color-dark);
+  text-align: center;
+  margin: 0 0 var(--haze-space-lg) 0;
+}
+
+.haze-social-proof__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--haze-space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 750px) {
+  .haze-social-proof__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonial card */
+.haze-social-proof__card {
+  background-color: var(--haze-color-blush);
+  border-radius: var(--haze-radius-card);
+  padding: var(--haze-space-md);
+}
+
+/* Star rating — terracotta via currentColor */
+.haze-social-proof__stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: var(--haze-space-sm);
+  color: var(--haze-color-terracotta);
+}
+
+.haze-social-proof__stars svg {
+  display: block;
+}
+
+/* Quote: Body role — 16px, italic, Cormorant Garamond */
+.haze-social-proof__quote {
+  font-family: var(--font-heading-family);
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--haze-color-dark);
+  margin: 0 0 var(--haze-space-sm) 0;
+  border: none;
+  padding: 0;
+}
+
+/* Reviewer name: Label role — 13px, uppercase, letter-spacing */
+.haze-social-proof__name {
+  font-family: var(--font-body-family);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--haze-color-dark);
+  opacity: 0.6;
+}
