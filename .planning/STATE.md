@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 2 UI-SPEC approved
-last_updated: "2026-04-09T02:11:38.713Z"
+stopped_at: Completed 02-01-PLAN.md (haze-hero section)
+last_updated: "2026-04-09T02:16:50.275Z"
 last_activity: 2026-04-09 -- Phase 2 planning complete
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 6
-  completed_plans: 0
-  percent: 0
+  completed_plans: 1
+  percent: 17
 ---
 
 # Project State
@@ -54,6 +54,7 @@ Progress: [███░░░░░░░] 33%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 02-core-pages P01 | 1 | 1 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -72,6 +73,7 @@ Recent decisions affecting current work:
 - [P1]: Nav breakpoint changed from 990px to 750px (CSS + JS aligned)
 - [P1]: settings_data.json edited directly in preset format (works without Customize panel)
 - [P1]: Cart type set to drawer
+- [Phase 02-core-pages]: Used height: 100dvh for full-viewport hero with 100vh fallback for older browser support
 
 ### Pending Todos
 
@@ -84,6 +86,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-09T01:45:51.846Z
-Stopped at: Phase 2 UI-SPEC approved
+Last session: 2026-04-09T02:16:50.273Z
+Stopped at: Completed 02-01-PLAN.md (haze-hero section)
 Resume: Run `/gsd:discuss-phase 2 --auto` → `/gsd:plan-phase 2` → `/gsd:execute-phase 2`
