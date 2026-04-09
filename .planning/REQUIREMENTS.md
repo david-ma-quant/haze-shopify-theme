@@ -34,13 +34,13 @@
 
 ### PDP
 
-- [ ] **PDP-01**: CSS scroll-snap image gallery (4 images, dot indicator synced by JS)
-- [ ] **PDP-02**: Product info with price, kit contents richtext, and ATC form (single variant)
+- [x] **PDP-01**: CSS scroll-snap image gallery (4 images, dot indicator synced by JS)
+- [x] **PDP-02**: Product info with price, kit contents richtext, and ATC form (single variant)
 - [x] **PDP-03**: Ritual description block with serif treatment above ATC
 - [x] **PDP-04**: 4 ingredient icon blocks (SVG + material name + descriptor)
-- [ ] **PDP-05**: FAQ accordion via native `<details>/<summary>` (multiple can be open)
-- [ ] **PDP-06**: ATC form triggers Dawn's cart-drawer (no custom cart page)
-- [ ] **PDP-07**: Custom template `product.haze.json` assigned to Hair Ritual Kit
+- [x] **PDP-05**: FAQ accordion via native `<details>/<summary>` (multiple can be open)
+- [x] **PDP-06**: ATC form triggers Dawn's cart-drawer (no custom cart page)
+- [x] **PDP-07**: Custom template `product.haze.json` assigned to Hair Ritual Kit
 
 ### About & FAQ
 
@@ -102,13 +102,13 @@
 | VIDEO-03 | Phase 2 | Complete |
 | VIDEO-04 | Phase 2 | Complete |
 | VIDEO-05 | Phase 2 | Complete |
-| PDP-01 | Phase 3 | Pending |
-| PDP-02 | Phase 3 | Pending |
+| PDP-01 | Phase 3 | Complete |
+| PDP-02 | Phase 3 | Complete |
 | PDP-03 | Phase 3 | Complete |
 | PDP-04 | Phase 3 | Complete |
-| PDP-05 | Phase 3 | Pending |
-| PDP-06 | Phase 3 | Pending |
-| PDP-07 | Phase 3 | Pending |
+| PDP-05 | Phase 3 | Complete |
+| PDP-06 | Phase 3 | Complete |
+| PDP-07 | Phase 3 | Complete |
 | PAGE-01 | Phase 3 | Pending |
 | PAGE-02 | Phase 3 | Pending |
 | PAGE-03 | Phase 3 | Pending |

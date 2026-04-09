@@ -65,7 +65,7 @@ Plans:
 Plans:
 - [x] 03-01-PLAN.md — PDP custom sections (ritual description + ingredients grid + 4 SVG icons)
 - [x] 03-02-PLAN.md — Supporting pages (About + FAQ templates + shared CSS overrides)
-- [ ] 03-03-PLAN.md — PDP main template (product.haze.json + gallery CSS + dot indicator JS + verification)
+- [x] 03-03-PLAN.md — PDP main template (product.haze.json + gallery CSS + dot indicator JS + verification)
 **UI hint**: yes
 
 ---
