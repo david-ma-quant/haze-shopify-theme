@@ -1,0 +1,65 @@
+{{ 'haze-ingredients.css' | asset_url | stylesheet_tag }}
+
+<section id="haze-ingredients-{{ section.id }}" class="haze-ingredients">
+  {%- if section.settings.heading != blank -%}
+    <h2 class="haze-ingredients__heading page-width">{{ section.settings.heading | escape }}</h2>
+  {%- endif -%}
+  <div class="haze-ingredients__grid page-width">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'ingredient' -%}
+        <div class="haze-ingredients__block" {{ block.shopify_attributes }}>
+          {%- if block.settings.icon != blank -%}
+            <div class="haze-ingredients__icon" aria-hidden="true">
+              <img
+                src="{{ block.settings.icon | asset_url }}"
+                alt=""
+                width="40"
+                height="40"
+                loading="lazy"
+              >
+            </div>
+          {%- endif -%}
+          <h3 class="haze-ingredients__name">{{ block.settings.name | escape }}</h3>
+          <p class="haze-ingredients__descriptor">{{ block.settings.descriptor | escape }}</p>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Haze Ingredients",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section heading",
+      "default": "What makes it work."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingredient",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Icon filename (e.g. haze-icon-silk.svg)" },
+        { "type": "text", "id": "name", "label": "Material name", "default": "Mulberry Silk" },
+        { "type": "text", "id": "descriptor", "label": "Short descriptor", "default": "Gentle on every strand" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Haze Ingredients",
+    "blocks": [
+      { "type": "ingredient", "settings": { "icon": "haze-icon-silk.svg", "name": "Mulberry Silk", "descriptor": "Gentle on every strand" }},
+      { "type": "ingredient", "settings": { "icon": "haze-icon-bristle.svg", "name": "Boar Bristle", "descriptor": "Distributes natural oils" }},
+      { "type": "ingredient", "settings": { "icon": "haze-icon-oeko.svg", "name": "OEKO-TEX Cotton", "descriptor": "Certified safe for skin" }},
+      { "type": "ingredient", "settings": { "icon": "haze-icon-mulberry.svg", "name": "Silk Scrunchie", "descriptor": "Zero breakage at the tie" }}
+    ]
+  }]
+}
+{% endschema %}

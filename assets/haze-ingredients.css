@@ -1,0 +1,63 @@
+/* Haze Ingredients — 4-block responsive grid below ritual description */
+
+.haze-ingredients {
+  padding: var(--haze-space-xl) 0;
+  background-color: var(--haze-color-cream);
+}
+
+.haze-ingredients__heading {
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--haze-color-dark);
+  margin: 0 0 var(--haze-space-lg) 0;
+}
+
+.haze-ingredients__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--haze-space-md);
+}
+
+@media screen and (min-width: 990px) {
+  .haze-ingredients__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--haze-space-lg);
+  }
+}
+
+.haze-ingredients__block {
+  text-align: center;
+  padding: var(--haze-space-md) 0;
+}
+
+.haze-ingredients__icon {
+  margin-bottom: var(--haze-space-sm);
+}
+
+.haze-ingredients__icon img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.haze-ingredients__name {
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--haze-color-dark);
+  margin: 0 0 var(--haze-space-xs) 0;
+}
+
+.haze-ingredients__descriptor {
+  font-family: var(--font-body-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--haze-color-dark);
+  opacity: 0.75;
+  margin: 0;
+}
