@@ -1,0 +1,30 @@
+{{ 'haze-hero.css' | asset_url | stylesheet_tag }}
+
+<section id="haze-hero-{{ section.id }}" class="haze-hero">
+  <div class="haze-hero__media">
+    {%- comment -%} PLACEHOLDER — replace with real hero photography {%- endcomment -%}
+    <img src="{{ 'haze-placeholder-hero.jpg' | asset_url }}" alt="Haze Hair Ritual Kit — placeholder" class="haze-hero__image" loading="eager" width="1920" height="1080" fetchpriority="high">
+  </div>
+  <div class="haze-hero__scrim"></div>
+  <div class="haze-hero__content">
+    <h1 class="haze-hero__headline">{{ section.settings.headline }}</h1>
+    <p class="haze-hero__subtext">{{ section.settings.subtext }}</p>
+    <a href="{{ section.settings.cta_link }}" class="haze-hero__cta">{{ section.settings.cta_label }}</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Haze Hero",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    { "type": "text", "id": "headline", "label": "Headline", "default": "Stay tender." },
+    { "type": "text", "id": "subtext", "label": "Subtext", "default": "A complete hair ritual, beautifully made." },
+    { "type": "text", "id": "cta_label", "label": "CTA button label", "default": "Shop the Kit" },
+    { "type": "url", "id": "cta_link", "label": "CTA button link", "default": "/products/hair-ritual-kit" }
+  ],
+  "presets": [{ "name": "Haze Hero" }]
+}
+{% endschema %}
