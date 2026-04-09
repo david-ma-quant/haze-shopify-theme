@@ -1,0 +1,45 @@
+{%- comment -%}
+  Accepts:
+  - block: {Object} Section block Liquid object
+  - card_name: {String} Kit component name
+  - card_description: {String} Optional short description
+  - placeholder_image: {String} Filename of placeholder image in assets/
+  - video_url: {String} Optional video URL — if blank, no <video> rendered
+{%- endcomment -%}
+
+<div
+  class="haze-card{% if video_url != blank %} haze-card--has-video{% endif %}"
+  data-card-video
+  {{ block.shopify_attributes }}
+>
+  <div class="haze-card__media">
+    {%- comment -%} PLACEHOLDER — replace placeholder_image with real photography {%- endcomment -%}
+    <img
+      src="{{ placeholder_image | asset_url }}"
+      alt="{{ card_name }} — placeholder"
+      class="haze-card__image"
+      loading="lazy"
+      width="800"
+      height="1067"
+    >
+    {%- unless video_url == blank -%}
+      <video
+        class="haze-card__video"
+        muted
+        playsinline
+        loop
+        preload="none"
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        <source src="{{ video_url }}" type="video/mp4">
+      </video>
+    {%- endunless -%}
+  </div>
+  <div class="haze-card__body">
+    <h3 class="haze-card__name">{{ card_name | escape }}</h3>
+    {%- if card_description != blank -%}
+      <p class="haze-card__description">{{ card_description | escape }}</p>
+    {%- endif -%}
+  </div>
+</div>

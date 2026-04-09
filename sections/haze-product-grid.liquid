@@ -1,0 +1,53 @@
+{{ 'haze-product-grid.css' | asset_url | stylesheet_tag }}
+
+<section id="haze-product-grid-{{ section.id }}" class="haze-product-grid">
+  <div class="haze-product-grid__grid">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'card' -%}
+        {%- render 'haze-card-video',
+          block: block,
+          card_name: block.settings.name,
+          card_description: block.settings.description,
+          placeholder_image: block.settings.placeholder_image,
+          video_url: block.settings.video_url
+        -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{%- if request.page_type == 'index' -%}
+  <script src="{{ 'haze-video-card.js' | asset_url }}" defer></script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Haze Product Grid",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Kit Component Card",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Component name", "default": "Silk Comb" },
+        { "type": "text", "id": "description", "label": "Short description" },
+        { "type": "text", "id": "placeholder_image", "label": "Placeholder image filename", "default": "haze-placeholder-silk-comb.jpg" },
+        { "type": "text", "id": "video_url", "label": "Video URL (leave blank for static image only)" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Haze Product Grid",
+    "blocks": [
+      { "type": "card", "settings": { "name": "Silk Comb", "placeholder_image": "haze-placeholder-silk-comb.jpg" }},
+      { "type": "card", "settings": { "name": "Boar-Bristle Brush", "placeholder_image": "haze-placeholder-brush.jpg" }},
+      { "type": "card", "settings": { "name": "OEKO-TEX Towel", "placeholder_image": "haze-placeholder-towel.jpg" }},
+      { "type": "card", "settings": { "name": "Silk Scrunchie", "placeholder_image": "haze-placeholder-scrunchie.jpg" }},
+      { "type": "card", "settings": { "name": "Gift Box", "placeholder_image": "haze-placeholder-gift-box.jpg" }}
+    ]
+  }]
+}
+{% endschema %}
