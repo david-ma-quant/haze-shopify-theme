@@ -1,0 +1,165 @@
+/* Haze PDP — brand overrides for Dawn's main-product section
+   Loaded conditionally on product pages via layout/theme.liquid.
+   DO NOT modify section-main-product.css — all overrides here. */
+
+/* ========================================
+   GALLERY — scroll-snap mobile overrides
+   ======================================== */
+
+/* Force full-width slides on mobile for clean snap (override Dawn's grid--peek) */
+@media screen and (max-width: 749px) {
+  media-gallery .product__media-list .product__media-item {
+    width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  /* Remove Dawn's scroll padding (causes partial peek) */
+  media-gallery .product__media-list {
+    scroll-padding-left: 0;
+    gap: 0;
+  }
+
+  /* Hide Dawn's prev/next slider buttons on mobile — dots replace them */
+  media-gallery .slider-buttons {
+    display: none !important;
+  }
+
+  /* Hide Dawn's slider counter on mobile */
+  media-gallery .slider-counter {
+    display: none !important;
+  }
+}
+
+/* Gallery dot indicator container (injected by haze-pdp-gallery.js) */
+.haze-gallery-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--haze-space-xs);
+  padding: var(--haze-space-md) 0;
+}
+
+/* Individual dot */
+.haze-gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(44, 36, 32, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+  /* Ensure 44px tap target even though visual dot is 8px */
+  position: relative;
+}
+
+.haze-gallery-dot::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 44px;
+  height: 44px;
+}
+
+/* Active dot — terracotta solid */
+.haze-gallery-dot.is-active {
+  background-color: var(--haze-color-terracotta);
+}
+
+/* Hide dots on desktop (stacked layout doesn't need navigation dots) */
+@media screen and (min-width: 750px) {
+  .haze-gallery-dots {
+    display: none;
+  }
+}
+
+/* ========================================
+   PRODUCT INFO — typography overrides
+   ======================================== */
+
+/* Product title — Heading role: Cormorant Garamond */
+.product__title {
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--haze-color-dark);
+}
+
+/* Price — Body role: DM Sans */
+.product__info-wrapper .price__regular .price-item,
+.product__info-wrapper .price .price-item {
+  font-family: var(--font-body-family);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--haze-color-dark);
+}
+
+/* ========================================
+   ATC BUTTON — brand override
+   ======================================== */
+
+/* Terracotta fill, cream text, 2px radius, 44px min-height */
+product-info .product-form__submit,
+product-info .product-form__submit.button--primary {
+  background-color: var(--haze-color-terracotta);
+  color: var(--haze-color-cream);
+  border-radius: var(--haze-radius-button);
+  min-height: 44px;
+  font-family: var(--font-body-family);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  padding: 12px 32px;
+  width: 100%;
+  transition: opacity 0.2s ease;
+}
+
+product-info .product-form__submit:hover,
+product-info .product-form__submit:focus-visible {
+  opacity: 0.85;
+}
+
+/* ========================================
+   FAQ ACCORDION — collapsible_tab overrides
+   ======================================== */
+
+/* Question text (summary) — Heading role */
+product-info .accordion summary .h4,
+product-info .accordion summary h2 {
+  font-family: var(--font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--haze-color-dark);
+}
+
+/* Answer text (details body) — Body role */
+product-info .accordion .accordion__content .rte,
+product-info .accordion .accordion__content p {
+  font-family: var(--font-body-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--haze-color-dark);
+  opacity: 0.85;
+}
+
+/* Clean accordion border — subtle bottom border */
+product-info .accordion details {
+  border-color: rgba(44, 36, 32, 0.15);
+}
+
+/* Summary padding */
+product-info .accordion summary {
+  padding: var(--haze-space-sm) 0;
+}
+
+/* Answer padding */
+product-info .accordion .accordion__content {
+  padding-bottom: var(--haze-space-sm);
+}
