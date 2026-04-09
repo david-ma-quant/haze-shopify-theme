@@ -61,10 +61,10 @@ Plans:
   3. The ritual description, 4 ingredient icon blocks, and FAQ accordion are all visible above the fold on a 390px viewport without horizontal scroll
   4. Opening one FAQ item does not close another; clicking the same item again closes it
   5. The About page, FAQ page, and three policy pages all load without 404 and are reachable via footer links
-**Plans:** 3 plans
+**Plans:** 2/3 plans executed
 Plans:
-- [ ] 03-01-PLAN.md — PDP custom sections (ritual description + ingredients grid + 4 SVG icons)
-- [ ] 03-02-PLAN.md — Supporting pages (About + FAQ templates + shared CSS overrides)
+- [x] 03-01-PLAN.md — PDP custom sections (ritual description + ingredients grid + 4 SVG icons)
+- [x] 03-02-PLAN.md — Supporting pages (About + FAQ templates + shared CSS overrides)
 - [ ] 03-03-PLAN.md — PDP main template (product.haze.json + gallery CSS + dot indicator JS + verification)
 **UI hint**: yes
 
@@ -76,7 +76,7 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/3 | Planning complete | - |
 | 2. Core Pages | 2/3 | In Progress|  |
-| 3. PDP & Supporting Pages | 0/3 | Planning complete | - |
+| 3. PDP & Supporting Pages | 2/3 | In Progress|  |
 
 ---
 
