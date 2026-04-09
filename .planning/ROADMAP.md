@@ -44,10 +44,10 @@ Plans:
   3. Three value prop blocks and the bottom CTA section are visible on mobile at 375px with correct spacing
   4. The social proof section exists in markup and is hidden by default; toggling a Customize panel setting makes it visible
   5. Scrolling a card off-screen pauses its video; `prefers-reduced-motion` users see only static images throughout
-**Plans:** 1/3 plans executed
+**Plans:** 2/3 plans executed
 Plans:
 - [x] 02-01-PLAN.md — Full-viewport hero section (haze-hero.liquid + CSS)
-- [ ] 02-02-PLAN.md — Product grid with video hover framework (haze-product-grid + card snippet + JS)
+- [x] 02-02-PLAN.md — Product grid with video hover framework (haze-product-grid + card snippet + JS)
 - [ ] 02-03-PLAN.md — Value props, social proof, bottom CTA sections + homepage template wiring
 **UI hint**: yes
 
@@ -71,7 +71,7 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/3 | Planning complete | - |
-| 2. Core Pages | 1/3 | In Progress|  |
+| 2. Core Pages | 2/3 | In Progress|  |
 | 3. PDP & Supporting Pages | 0/? | Not started | - |
 
 ---

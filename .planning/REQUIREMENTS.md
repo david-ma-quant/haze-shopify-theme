@@ -27,7 +27,7 @@
 ### Homepage
 
 - [x] **HOME-01**: Full-viewport hero with background image, "Stay tender." headline, CTA to PDP
-- [ ] **HOME-02**: 5-card hardcoded product grid (4 kit components + gift box) with hover-video framework
+- [x] **HOME-02**: 5-card hardcoded product grid (4 kit components + gift box) with hover-video framework
 - [ ] **HOME-03**: 3 value prop blocks (icon + heading + text)
 - [ ] **HOME-04**: Social proof placeholder section (hidden by default, toggle-able)
 - [ ] **HOME-05**: Bottom CTA section (compact hero variant, blush color scheme)
@@ -50,11 +50,11 @@
 
 ### Hover Video
 
-- [ ] **VIDEO-01**: Card snippet renders static image when no video URL; `<video>` tag when URL set
-- [ ] **VIDEO-02**: Intersection Observer JS pauses off-screen videos; mouseenter/mouseleave on desktop
-- [ ] **VIDEO-03**: Touch device fallback via viewport-triggered autoplay
-- [ ] **VIDEO-04**: `prefers-reduced-motion` disables video entirely
-- [ ] **VIDEO-05**: JS loads only on homepage (`request.page_type == 'index'`)
+- [x] **VIDEO-01**: Card snippet renders static image when no video URL; `<video>` tag when URL set
+- [x] **VIDEO-02**: Intersection Observer JS pauses off-screen videos; mouseenter/mouseleave on desktop
+- [x] **VIDEO-03**: Touch device fallback via viewport-triggered autoplay
+- [x] **VIDEO-04**: `prefers-reduced-motion` disables video entirely
+- [x] **VIDEO-05**: JS loads only on homepage (`request.page_type == 'index'`)
 
 ## v2 Requirements
 
@@ -93,15 +93,15 @@
 | NAV-02 | Phase 1 | Pending |
 | NAV-03 | Phase 1 | Pending |
 | HOME-01 | Phase 2 | Complete |
-| HOME-02 | Phase 2 | Pending |
+| HOME-02 | Phase 2 | Complete |
 | HOME-03 | Phase 2 | Pending |
 | HOME-04 | Phase 2 | Pending |
 | HOME-05 | Phase 2 | Pending |
-| VIDEO-01 | Phase 2 | Pending |
-| VIDEO-02 | Phase 2 | Pending |
-| VIDEO-03 | Phase 2 | Pending |
-| VIDEO-04 | Phase 2 | Pending |
-| VIDEO-05 | Phase 2 | Pending |
+| VIDEO-01 | Phase 2 | Complete |
+| VIDEO-02 | Phase 2 | Complete |
+| VIDEO-03 | Phase 2 | Complete |
+| VIDEO-04 | Phase 2 | Complete |
+| VIDEO-05 | Phase 2 | Complete |
 | PDP-01 | Phase 3 | Pending |
 | PDP-02 | Phase 3 | Pending |
 | PDP-03 | Phase 3 | Pending |
