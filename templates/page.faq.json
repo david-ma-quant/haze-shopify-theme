@@ -1,0 +1,72 @@
+{
+  "sections": {
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "row-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does shipping take?",
+            "icon": "truck",
+            "row_content": "<p>US orders ship within 1\u20132 business days via USPS. Standard delivery is 3\u20135 business days. Free shipping on every order, always.<\/p>"
+          }
+        },
+        "row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your return policy?",
+            "icon": "return",
+            "row_content": "<p>We offer free returns within 30 days of delivery. Items must be unused. Start your return at the link in your order confirmation email.<\/p>"
+          }
+        },
+        "row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What materials are in the kit?",
+            "icon": "leaf",
+            "row_content": "<p>Grade-A mulberry silk comb and scrunchie. 100% boar-bristle brush. OEKO-TEX Standard 100 certified cotton hair towel. Everything arrives in a reusable keepsake gift box.<\/p>"
+          }
+        },
+        "row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I build a hair ritual with this kit?",
+            "icon": "question_mark",
+            "row_content": "<p>After washing: press hair dry with the OEKO-TEX towel (no rubbing). Detangle gently with the silk comb, working from ends to roots. Finish with the boar-bristle brush for smoothness. Secure with the silk scrunchie. That\u2019s it \u2014 five minutes, every morning.<\/p>"
+          }
+        },
+        "row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is the kit good as a gift?",
+            "icon": "heart",
+            "row_content": "<p>Yes \u2014 it ships in a ribbon-tied keepsake box. Add a personalized note at checkout. Gift receipts available on request via support@haze.hair.<\/p>"
+          }
+        },
+        "row-5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you ship internationally?",
+            "icon": "globe",
+            "row_content": "<p>US shipping only for now. International shipping is coming \u2014 sign up for our email list to be first to know.<\/p>"
+          }
+        }
+      },
+      "block_order": ["row-0", "row-1", "row-2", "row-3", "row-4", "row-5"],
+      "settings": {
+        "caption": "",
+        "heading": "Questions & Answers",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": ["faq"]
+}

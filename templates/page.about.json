@@ -1,0 +1,103 @@
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tender care, every morning.",
+            "heading_size": "h0"
+          }
+        },
+        "subheading": {
+          "type": "text",
+          "settings": {
+            "text": "We built the kit we wished existed."
+          }
+        }
+      },
+      "block_order": ["heading", "subheading"],
+      "settings": {
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "image_overlay_opacity": 35,
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "brand-story": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Started with Our Own Hair",
+            "heading_size": "h1"
+          }
+        },
+        "text-0": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Haze was born from a frustration most of us share \u2014 a bathroom drawer full of tools that don\u2019t work well and don\u2019t look beautiful together. We wanted a single kit that felt intentional: tools that are gentle, materials that last, and a ritual worth doing every morning.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": ["heading-0", "text-0"],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "tool-philosophy": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Every Tool Has a Purpose",
+            "heading_size": "h1"
+          }
+        },
+        "text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The silk comb glides without tugging. The boar-bristle brush distributes what your scalp already makes. The OEKO-TEX towel absorbs without friction. The silk scrunchie holds without leaving a dent. Nothing in this kit is decorative \u2014 everything earns its place.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": ["heading-1", "text-1"],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": ["hero", "brand-story", "tool-philosophy"]
+}
